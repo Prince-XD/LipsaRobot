@@ -63,8 +63,7 @@ from LipsaRobot.modules.helper_funcs.misc import paginate_modules
 from LipsaRobot.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-You can find my list of available commands with /help. 
+Hello there, I'm [𝙇𝙞𝙥𝙨𝙖](https://telegra.ph/file/51de93513eca8ddabfd3b.jpg) 
 """
 
 buttons = [
@@ -72,18 +71,18 @@ buttons = [
         InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
     ],
     [
-        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
+        InlineKeyboardButton(text="Help & Commands ❓", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💫 Add Daisy to your group 💫", url="t.me/LipsaRobotBot?startgroup=true"
+            text="💫 Add Lipsa to your group 💫", url="t.me/LipsaRobot?startgroup=true"
         ),
     ],
 ]
 
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
+*Main Commands :* [👰](https://telegra.ph/file/51de93513eca8ddabfd3b.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
@@ -356,9 +355,9 @@ def LipsaRobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 "
+            text=f"*👰 Hi again!  The name's {dispatcher.bot.first_name} \n\nAs  You I'm a next generational group management bot developed by Infinity_Bots.* "
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/473cc17913393959e0667.jpg)"
+            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/51de93513eca8ddabfd3b.jpg)"
             f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
